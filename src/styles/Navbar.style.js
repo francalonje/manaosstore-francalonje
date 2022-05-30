@@ -57,7 +57,7 @@ export const NavbarLinkExtended = styled(Link)`
 
 export const Logo = styled.img`
   margin: 10px;
-  max-width: 180px;
+  max-width: 300px;
   height: auto;
 `;
 
@@ -81,4 +81,19 @@ export const NavbarExtendedContainer = styled.div`
   @media (min-width: 700px) {
     display: none;
   }
+`;
+
+export const CartWidget = styled.button`
+margin-top:1rem;
+margin-right:3em;
+vertical-align: middle
+  display: flex; 
+
+  align-items: center;
+  width: 70px;
+  height: 50px;
+  background:none;
+  color: black;
+  font-size: 20px;
+  cursor: pointer;
 `;

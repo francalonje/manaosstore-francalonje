@@ -9,9 +9,13 @@ import {
   NavbarLink,
   Logo,
   OpenLinksButton,
+  CartWidget,
   NavbarLinkExtended,
 } from "../styles/Navbar.style";
 import LogoImg from "../assets/logo.png";
+// import CartWidget from "./CartWidget";
+import { FaShoppingCart } from 'react-icons/fa';
+
 
 function Navbar() {
   const [extendNavbar, setExtendNavbar] = useState(false);
@@ -35,6 +39,7 @@ function Navbar() {
           </NavbarLinkContainer>
         </LeftContainer>
         <RightContainer>
+          <CartWidget><FaShoppingCart /> 1</CartWidget>
           <Logo src={LogoImg}></Logo>
         </RightContainer>
       </NavbarInnerContainer>
@@ -46,6 +51,7 @@ function Navbar() {
           <NavbarLinkExtended to="/about"> About Us</NavbarLinkExtended>
         </NavbarExtendedContainer>
       )}
+       
     </NavbarContainer>
   );
 }
