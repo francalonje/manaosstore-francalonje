@@ -1,9 +1,14 @@
 import React from 'react'
 import { ItemListContainerC } from "../styles/ItemListContainer.style";
+import  ItemCounter  from "../components/ItemCounter";
 
 function ItemListContainer() {
   return (
-    <ItemListContainerC>Hola soy contenido</ItemListContainerC>
+    <div>
+       <ItemListContainerC>Hola soy contenido</ItemListContainerC>
+       <ItemCounter> </ItemCounter>
+    </div>
+ 
   )
 }
 
