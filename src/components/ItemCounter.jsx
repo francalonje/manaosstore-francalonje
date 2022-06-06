@@ -1,24 +1,25 @@
 import {React, useState } from 'react'
 import { ItemCounterC, ItemText, ItemImage, ItemCounterCounter, ItemPop, ItemNumber, ItemAdd  } from "../styles/ItemCounter.style";
 
-function ItemCounter() {
+function ItemCounter({stock, initial, onAdd}) {
 
-    const [counter, setCounter] = useState(0);
+    const [counter, setCounter] = useState(initial ? initial : 0);
    
     //increase counter
     const increase = () => {
-      setCounter(count => count + 1);
+      counter < stock ?  setCounter(count => count + 1) : alert('No se puede agregar');
+    ;
     };
    
     //decrease counter
     const decrease = () => {
-      setCounter(count => count - 1);
+      counter > 0 ? setCounter(count => count - 1): alert('No hay mas productos por eliminar');
     };
    
     //reset counter 
     const reset = () =>{
       setCounter(0)
-    }
+    };
    
 
 
@@ -30,6 +31,7 @@ function ItemCounter() {
               <ItemCounterCounter>
                   <ItemPop onClick={ decrease}>-</ItemPop><ItemNumber>{counter}</ItemNumber><ItemAdd onClick={increase}>+</ItemAdd>
               </ItemCounterCounter>
+              <button onClick={onAdd}> Agregar al carrito </button>
         </ItemCounterC>
        
     </div>
