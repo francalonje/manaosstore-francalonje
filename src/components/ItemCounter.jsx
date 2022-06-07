@@ -20,6 +20,10 @@ function ItemCounter({stock, initial, onAdd}) {
     const reset = () =>{
       setCounter(0)
     };
+
+    const handleAddToCart = () =>{
+      stock? onAdd(counter) : alert("NO HAY STOCK CHE PERDONA LOCURA");
+    };
    
 
 
@@ -31,7 +35,7 @@ function ItemCounter({stock, initial, onAdd}) {
               <ItemCounterCounter>
                   <ItemPop onClick={ decrease}>-</ItemPop><ItemNumber>{counter}</ItemNumber><ItemAdd onClick={increase}>+</ItemAdd>
               </ItemCounterCounter>
-              <button onClick={onAdd}> Agregar al carrito </button>
+              <button onClick={handleAddToCart}> Agregar al carrito </button>
         </ItemCounterC>
        
     </div>
