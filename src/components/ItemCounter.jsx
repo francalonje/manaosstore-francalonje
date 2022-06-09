@@ -1,7 +1,7 @@
 import {React, useState } from 'react'
-import { ItemCounterC, ItemText, ItemImage, ItemCounterCounter, ItemPop, ItemNumber, ItemAdd  } from "../styles/ItemCounter.style";
+import { ItemCounterC, ItemPop, ItemNumber, ItemAdd  } from "../styles/Item.style";
 
-function ItemCounter({stock, initial, onAdd}) {
+function ItemCounter({stock = 5, initial =1 , onAdd=((counter) =>  alert(`sumaste ${counter} productos`))}) {
 
     const [counter, setCounter] = useState(initial ? initial : 0);
    
@@ -22,22 +22,19 @@ function ItemCounter({stock, initial, onAdd}) {
     };
 
     const handleAddToCart = () =>{
-      stock? onAdd(counter) : alert("NO HAY STOCK CHE PERDONA LOCURA");
+      stock ? onAdd(counter) : alert("NO HAY STOCK CHE PERDONA LOCURA");
     };
    
 
 
   return (
     <div>
-        <ItemCounterC>
-              <ItemText>   item  </ItemText>
-              <ItemImage></ItemImage>
-              <ItemCounterCounter>
+        
+              <ItemCounterC>
                   <ItemPop onClick={ decrease}>-</ItemPop><ItemNumber>{counter}</ItemNumber><ItemAdd onClick={increase}>+</ItemAdd>
-              </ItemCounterCounter>
+              </ItemCounterC>
               <button onClick={handleAddToCart}> Agregar al carrito </button>
-        </ItemCounterC>
-       
+
     </div>
   )
 }
