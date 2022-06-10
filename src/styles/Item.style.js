@@ -53,13 +53,6 @@ export const ItemDetailTitle = styled.div`
   
 `;
 
-export const ItemDetailDescription = styled.div`
-  display: flex;
-  font-size: 8px;
-  text-align: left;
-
-  
-`;
 
 export const ItemCounterC = styled.div`
 display: flex;
@@ -88,4 +81,32 @@ export const ItemListC = styled.div`
 display: flex;
 flex-direction: row;
 flex-wrap: wrap;
+`;
+
+export const ItemPrice = styled.div`
+display: flex;
+flex-direction: column;
+text-align: right;
+font-size: 14px;
+padding: 10px 10px 0px 0px ;
+  
+`;
+
+export const ItemShortInfo = styled.div`
+display: flex;
+flex-direction: row;
+font-size: 12px;
+text-align: left;
+margin: 4px 8px 8px 4px;
+`;
+
+
+export const ItemStockInfo = styled.div`
+display: flex;
+font-size: 14px;
+flex-direction: column;
+flex-wrap: wrap;
+text-align: center;
+background-color: lightgrey;
+padding: 2px;
 `;

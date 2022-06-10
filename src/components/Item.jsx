@@ -1,19 +1,24 @@
-import React from 'react'
-import ItemCounter from './ItemCounter'
-import ItemDetail from './ItemDetail'
-import { ItemC, ItemHeader,ItemImage  } from "../styles/Item.style";
+import { React } from 'react'
+import { ItemC, ItemHeader,ItemImage, ItemPrice, ItemShortInfo, ItemStockInfo  } from "../styles/Item.style";
 
 
 
 
-function Item({id, title, price, pictureURL}) {
+function Item({gaseosa}) {
+
+  const {id, title, price, pictureURL, itemInfo, itemStock} = gaseosa;
   
+  
+const image = require("../assets/" + pictureURL +".jpg");
+
   return (
     <div>
         <ItemC>
-         <ItemImage><img width="50%" src={require("../assets/MANAOS-COLA-1,25LTS.jpg")} /></ItemImage>
-         <ItemDetail></ItemDetail>
-         <ItemCounter></ItemCounter>
+         <ItemHeader>{title}</ItemHeader>
+         <ItemImage><img width="50%" src={image} /></ItemImage>
+         <ItemPrice>Precio {price}</ItemPrice>
+         <ItemShortInfo>{itemInfo}</ItemShortInfo>
+         <ItemStockInfo>Stock: {itemStock}</ItemStockInfo>
         </ItemC>
     </div>
   )
