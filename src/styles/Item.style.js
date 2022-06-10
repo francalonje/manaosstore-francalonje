@@ -5,7 +5,7 @@ import styled from "styled-components";
 export const ItemC = styled.div`
   background-color: #FEC8C1;
   display: flex;
-  width: 200px;
+  width: 210px;
   flex-direction: column;
   border: 2px solid ;
   border-color: #686868;
@@ -81,4 +81,11 @@ export const ItemNumber = styled.b`
 export const ItemAdd = styled.button`
 background-color: green;
 display: flex;
+`;
+
+
+export const ItemListC = styled.div`
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
 `;

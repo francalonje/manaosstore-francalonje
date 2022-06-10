@@ -1,8 +1,17 @@
 import React from 'react'
+import Item from './Item'
+import { ItemListC  } from "../styles/Item.style";
 
 function ItemList() {
   return (
-    <div>ItemList</div>
+    <ItemListC>
+      <Item></Item>
+      <Item></Item>
+      <Item></Item>
+      <Item></Item>
+      <Item></Item>
+      <Item></Item>
+    </ItemListC>
   )
 }
 
