@@ -14,7 +14,7 @@ function ItemListContainer() {
     setTimeout(()=>{
       fetch("gaseosas.json")
         .then(res => res.json())
-        .then(json => setArrayGaseosas(json))
+        .then(json => {console.log(json); setArrayGaseosas(json)})
         .catch(err => console.error("Error al importar gaseosas.json:", err))
         .finally(setLoading(false))
     }, 2000)
@@ -27,7 +27,6 @@ function ItemListContainer() {
   } else {
     return (
       <>
-     
         <ItemList arrayGaseosas={arrayGaseosas} />
       </>
     )

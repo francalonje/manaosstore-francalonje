@@ -2,14 +2,16 @@ import { React } from 'react'
 import { Link } from 'react-router-dom'
 import { ItemC, ItemImage, ItemPrice, ItemStockInfo  } from "../styles/Item.style";
 
-function Item({id, title, price, pictureURL, stock, itemInfo}) {
-  
+function Item({gaseosa}) {
+  const {id, title, price, pictureURL, stock} = gaseosa;
+
+
 
   return (
     <Link to={`/producto/${title}`}>
     <div>
         <ItemC>
-         <ItemImage><img width="50%" src={"./"+ pictureURL} alt={title}/></ItemImage>
+         <ItemImage><img width="50%" src={""+ pictureURL} alt={title}/></ItemImage>
          <ItemPrice>Precio: {price}</ItemPrice>
          <ItemStockInfo>Stock: {stock}/100</ItemStockInfo>
          <button>Detalles</button>

@@ -26,12 +26,13 @@ export const ItemHeader = styled.p`
   margin-top: 0px;
 `;
 
-export const ItemImage = styled.div`
+export const ItemImage = styled.image`
   display: flex;  
   flex-direction: row;
   width: 100%;
   justify-content: center;
   font-weight: bold;
+  height: 150px;
 
   
 `;
