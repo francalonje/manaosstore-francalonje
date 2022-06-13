@@ -32,9 +32,10 @@ function ItemCounter({stock = 5, initial =1 , onAdd=((counter) =>  alert(`sumast
         
               <ItemCounterC>
                   <ItemPop onClick={ decrease}>-</ItemPop><ItemNumber>{counter}</ItemNumber><ItemAdd onClick={increase}>+</ItemAdd>
+                 
               </ItemCounterC>
+           
               <button onClick={handleAddToCart}> Agregar al carrito </button>
-
     </div>
   )
 }

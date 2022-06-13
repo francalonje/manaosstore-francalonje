@@ -2,11 +2,14 @@ import React from 'react'
 import Item from './Item'
 import { ItemListC  } from "../styles/Item.style";
 
-function ItemList({gaseosas}) {
+function ItemList({arrayGaseosas}) {
+
+  
   return (
     <ItemListC>
-        {gaseosas?.map(gaseosa => <Item /> )}
+        {arrayGaseosas?.map(gaseosa => <Item key={gaseosa.id} gaseosa={gaseosa}/>)}
     </ItemListC>
-)}
+  )
+}
 
 export default ItemList

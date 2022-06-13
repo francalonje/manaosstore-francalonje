@@ -1,26 +1,21 @@
 import { React } from 'react'
-import { ItemC, ItemHeader,ItemImage, ItemPrice, ItemShortInfo, ItemStockInfo  } from "../styles/Item.style";
+import { Link } from 'react-router-dom'
+import { ItemC, ItemImage, ItemPrice, ItemStockInfo  } from "../styles/Item.style";
 
-
-
-
-function Item({gaseosa}) {
-
-  const {id, title, price, pictureURL, itemInfo, itemStock} = gaseosa;
+function Item({id, title, price, pictureURL, stock, itemInfo}) {
   
-  
-const image = require("../assets/" + pictureURL +".jpg");
 
   return (
+    <Link to={`/producto/${title}`}>
     <div>
         <ItemC>
-         <ItemHeader>{title}</ItemHeader>
-         <ItemImage><img width="50%" src={image} /></ItemImage>
-         <ItemPrice>Precio {price}</ItemPrice>
-         <ItemShortInfo>{itemInfo}</ItemShortInfo>
-         <ItemStockInfo>Stock: {itemStock}</ItemStockInfo>
+         <ItemImage><img width="50%" src={"./"+ pictureURL} alt={title}/></ItemImage>
+         <ItemPrice>Precio: {price}</ItemPrice>
+         <ItemStockInfo>Stock: {stock}/100</ItemStockInfo>
+         <button>Detalles</button>
         </ItemC>
     </div>
+    </Link>
   )
 }
 

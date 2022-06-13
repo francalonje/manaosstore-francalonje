@@ -1,0 +1,39 @@
+[
+    {
+        "id" : 1,
+        "pictureURL" : "manaospetroleo.jpg",
+        "title" : "Manaos Petroleo",
+        "category" : "harinas",
+        "itemInfo" : "SI alguna vez te preguntaste como seria si fumar fuera una bebida te invitamos a comprar esta gaseosa",
+        "stock" : 100,
+        "price" : 20
+    },{
+        "id" : 2,
+        "pictureURL" : "manaoscerveza.jpg",
+        "title" : "Manaos Cerveza",
+        "itemInfo" : "Si! Leiste bien, ahora manaos tambien hace cerveza, en verdad es un tipo de sidra pero no podemos decirte cual",
+        "stock" : 20,
+        "price" : 10
+    },{
+        "id" : 3,
+        "pictureURL" : "manaossorpresa.jpg",
+        "title" : "Manaos Sorpresa",
+        "itemInfo" : "El escritor se quedo sin originalidad en la tercera descripcion",
+        "stock" : 50,
+        "price" : 100
+    },{
+        "id" : 4,
+        "pictureURL" : "manaosdisfrazada.jpg",
+        "title" : "Manaos Disfrazada",
+        "itemInfo" : "Una manaos que decidio ser otra cosa. Es el producto menos vendido de nuestra tienda",
+        "stock" : 100,
+        "price" : 100
+    },{
+        "id" : 5,
+        "pictureURL" : "manaosmandarina.jpg",
+        "title" : "Manaos Mandarina",
+        "itemInfo" : "Una manaos de gusto decepcionantemente normal",
+        "stock" : 2,
+        "price" : 100
+    }
+]

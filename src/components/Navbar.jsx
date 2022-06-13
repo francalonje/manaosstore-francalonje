@@ -12,7 +12,7 @@ import {
   CartWidget,
   NavbarLinkExtended,
 } from "../styles/Navbar.style";
-import LogoImg from "../assets/logo.png";
+import LogoImg from "./assets/logo.png";
 // import CartWidget from "./CartWidget";
 import { FaShoppingCart } from 'react-icons/fa';
 
